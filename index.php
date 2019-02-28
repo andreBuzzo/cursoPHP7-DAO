@@ -15,13 +15,23 @@ $lista = Usuario::getList();
 echo json_encode($lista);
 */
 
-/*EFETUA UMA PESQUISA NO BANCO*/
+/*EFETUA UMA PESQUISA NO BANCO
 
 $login = "tuco";
 $senha = "123456";
 $search = new Usuario();
 $search->login($login, $senha);
 echo $search;
+*/
 
+/*fazendo um insert no banco de dados usando DAO*/
+
+$usuario = new Usuario();
+$usuario->setDeslogin("aluno");
+$usuario->setDessenha("kkkk");
+
+$usuario->insert();
+
+echo $usuario;
 
 ?>
