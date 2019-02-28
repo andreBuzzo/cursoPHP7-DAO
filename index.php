@@ -2,10 +2,26 @@
 
 require_once ("config/config.php");
 
-$tuco = new Usuario();
+/*
+CARREGA UM USUÁRIO
+$root = new Usuario();
+$root->loadById(2);
+echo $root;
+*/
 
-$tuco->loadById(2);
+/*
+CARREGA UMA LISTA DE USUÁRIOS
+$lista = Usuario::getList();
+echo json_encode($lista);
+*/
 
-echo $tuco;
+/*EFETUA UMA PESQUISA NO BANCO*/
+
+$login = "tuco";
+$senha = "123456";
+$search = new Usuario();
+$search->login($login, $senha);
+echo $search;
+
 
 ?>
