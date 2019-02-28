@@ -24,14 +24,20 @@ $search->login($login, $senha);
 echo $search;
 */
 
-/*fazendo um insert no banco de dados usando DAO*/
-
+/*fazendo um insert no banco de dados usando DAO
 $usuario = new Usuario();
 $usuario->setDeslogin("aluno");
 $usuario->setDessenha("kkkk");
-
 $usuario->insert();
+echo $usuario;
+*/
+
+/*alterando um usuário no banco de dados*/
+$usuario = new Usuario();
+$usuario->loadById(5);
+$usuario->update("mario", "123456kk");
 
 echo $usuario;
+
 
 ?>
