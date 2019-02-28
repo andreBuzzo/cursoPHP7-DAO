@@ -1,12 +1,11 @@
 <?php 
 
-	require_once ("config/config.php");
+require_once ("config/config.php");
 
-	$sql = new Sql();
+$tuco = new Usuario();
 
-	$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+$tuco->loadById(2);
 
-	echo json_encode($usuarios);
+echo $tuco;
 
-
- ?>
+?>
