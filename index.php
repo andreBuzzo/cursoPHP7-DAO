@@ -32,11 +32,17 @@ $usuario->insert();
 echo $usuario;
 */
 
-/*alterando um usuário no banco de dados*/
+/*alterando um usuário no banco de dados
 $usuario = new Usuario();
 $usuario->loadById(5);
 $usuario->update("mario", "123456kk");
+echo $usuario;
+*/
 
+/*deletando um usuário no banco de dados*/
+$usuario = new Usuario();
+$usuario->loadById(5);
+$usuario->delete();
 echo $usuario;
 
 
